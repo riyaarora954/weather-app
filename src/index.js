@@ -51,3 +51,7 @@ function displayCity(event) {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", displayCity);
+
+document.addEventListener("DOMContentLoaded", function () {
+  searchCity("Paris"); // Replace "Paris" with your preferred default city
+});
