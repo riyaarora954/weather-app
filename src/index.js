@@ -7,6 +7,7 @@ function updateWeather(response) {
   let windSpeedElement = document.querySelector("#wind-speed-data");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
 
   timeElement.innerHTML = formatDate(date);
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
@@ -14,6 +15,7 @@ function updateWeather(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   cityElement.innerHTML = response.data.city;
   currentTemperature.innerHTML = Math.round(tempElement);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
 }
 
 function formatDate(date) {
