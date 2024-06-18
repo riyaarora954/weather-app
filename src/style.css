@@ -58,7 +58,7 @@ footer {
   line-height: 24px;
   font-weight: 500;
 }
-.weather-app-data span {
+.weather-app-data strong {
   color: #f65282;
 }
 .weather-app-temperature-details {
